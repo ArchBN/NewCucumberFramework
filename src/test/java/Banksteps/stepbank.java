@@ -10,9 +10,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class stepbank {
     WebDriver driver;
 
-    @Given("^Open DemoGuru URL and launch the application$")
-    public void open_DemoGuru_URL_and_launch_the_application() {
-        System.setProperty("webdriver.chrome.driver", "C://Users//archana//chromedriver_win32//chromedriver.exe");
+    @Given("Open DemoGuru URL and launch the application")
+    public void open_demo_guru_url_and_launch_the_application() {
+       System.setProperty("webdriver.chrome.driver", "C://Users//archana//chromedriver_win32//chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         String baseUrl = "http://www.demo.guru99.com/V4/";
@@ -21,7 +21,9 @@ public class stepbank {
     @When("^User enters username and password$")
     public void userEntersUsername() {
         {
+            driver.findElement(By.name("uid")).clear();
             driver.findElement(By.name("uid")).sendKeys("mngr356926");
+            driver.findElement(By.name("password")).clear();
             driver.findElement(By.name("password")).sendKeys("Yheruje");
 
         }

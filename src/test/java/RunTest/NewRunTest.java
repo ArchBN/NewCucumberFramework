@@ -4,9 +4,9 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "C://Users//nbhat//IdeaProjects//NewCucumberFramework//src//test//resources//NewFeatures//Banklogin.feature",
-        glue = {"stepbank"},
+        glue = {"Banksteps"},
         monochrome=true,
-        plugin ={"Pretty","html:Reports/test-output"}
+        plugin=  {"json:target/cucumber.json"}
 )
 public class NewRunTest {
 }
