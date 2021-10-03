@@ -1,5 +1,16 @@
+#Feature:Bank application login
+  #Scenario:Validate Login page of bank
+   # Given Open DemoGuru URL and launch the application
+    #When User enters username and password
+    #Then Submit the credentials
+
+
 Feature:Bank application login
-  Scenario:Validate Login page of bank
+  Scenario Outline:Validate Login page of bank
     Given Open DemoGuru URL and launch the application
-    When User enters username and password
+    When User enters "<username>" and "<password>"
     Then Submit the credentials
+    Examples:
+      | username   | password |
+      | mngr356926 | Yheruje  |
+      | mngr356926 | Yheruje  |

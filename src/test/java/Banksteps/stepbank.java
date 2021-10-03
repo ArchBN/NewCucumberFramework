@@ -18,13 +18,13 @@ public class stepbank {
         String baseUrl = "http://www.demo.guru99.com/V4/";
         driver.get(baseUrl);
     }
-    @When("^User enters username and password$")
-    public void userEntersUsername() {
+    @When("^User enters \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void userEntersUsername(String username,String password) {
         {
             driver.findElement(By.name("uid")).clear();
-            driver.findElement(By.name("uid")).sendKeys("mngr356926");
+            driver.findElement(By.name("uid")).sendKeys(username);
             driver.findElement(By.name("password")).clear();
-            driver.findElement(By.name("password")).sendKeys("Yheruje");
+            driver.findElement(By.name("password")).sendKeys(password);
 
         }
     }
